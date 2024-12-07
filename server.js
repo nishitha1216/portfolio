@@ -25,6 +25,7 @@ function getContentType(ext) {
       return "text/plain";
   }
 }
+app.use(cors());
 
 // Create HTTP server
 const server = http.createServer(async (req, res) => {
