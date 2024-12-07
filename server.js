@@ -25,9 +25,7 @@ function getContentType(ext) {
       return "text/plain";
   }
 }
-app.use(cors({
-  origin: 'http://localhost:8080'  // Allow only requests from this domain
-}));
+
 
 // Create HTTP server
 const server = http.createServer(async (req, res) => {
