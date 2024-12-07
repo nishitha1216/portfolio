@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishitha's Portfolio</title>
+    <link rel="stylesheet" href="./styles.css"> 
+
+    <script>
+        function toggleMenu() {
+    var x = document.getElementById("navMenu");
+    if (x.className === "") {
+        x.className += " responsive";
+    } else {
+        x.className = "";
+    }
+}
+
+    </script>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F7F7FF;
+}
+
+section {
+    font-family: Arial, sans-serif;
+    background-color: #0072B1;
+    line-height: 1.6;
+    margin: 0 2vw 2vw 2vw;
+}
+
+/* Full-width Navigation Bar */
+header {
+    background-color: #0072B1;
+    padding: 2vh 0;
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    margin: 20px;
+    color: white;
+}
+
+h2{
+    color: white;
+    background-color: #0072B1;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 10px;
+}
+div.icon
+{
+    color: white;
+}
+nav ul {
+    list-style: none;
+    width: 90vw;
+    margin: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 1.5vw;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #0072B1;
+    font-size: 3vh;
+    padding: 1.5vh 2vw;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #ACC6C7;
+    border-radius: 5px;
+}
+
+section
+{
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+/* About Section */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 2vw;
+    max-width: 100vw;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2vh 2vw;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-photo {
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.about-text
+{
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+.profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name-designation {
+    text-align: center;
+    
+}
+
+.connect-btn {
+    margin-top: 3vh;
+    padding: 1vh 2vw;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.connect-btn:hover {
+    background-color: #ACC6C7;
+}
+
+/* Services Section */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-adjusting grid */
+    gap: 2vw;
+    padding: 2vh 2vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box {
+    text-align: center;
+    background-color: #f0f0f0
+}
+
+.service-box img {
+    width: 50%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Experience Section */
+.experience-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for blocks */
+    grid-template-rows: 2fr;
+    gap: 2vw; /* Added gap between blocks */
+    padding: 2vh 2vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Additional margin for spacing */
+}
+
+.experience-box {
+    background-color: #f0f0f0; /* Block-style background */
+    padding: 2vw;
+    border-radius: 5px;
+    margin-bottom: 2vh; /* Spacing between each block */
+    display: grid;
+    grid-template-columns: 100px auto; /* Image and text side by side */
+    grid-template-rows: 1fr;
+    gap: 1vw;
+    align-items: center;
+}
+
+.experience-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.experience-text h2 {
+    margin-bottom: 1vh;
+}
+
+/* Project Section Container */
+.projects-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible columns */
+    gap: 2vw; /* Spacing between boxes */
+    padding: 2vh 2vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Project Boxes */
+.project-box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 2vh;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 2vh;
+}
+
+.project-title {
+    font-size: 1.5rem; 
+    margin-top: 1vh; 
+    font-weight: bold; 
+}
+
+.project-description {
+    font-size: 1rem; 
+    margin-top: 0.5vh;
+}
+
+/* Education and Certificates Section */
+.edu-cert-container {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw; 
+    padding: 2vh 2vw;
+    
+    
+    background-color: white; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.edu-box, .cert-box {
+    padding: 2vh 2vw; /* Add padding */
+    
+
+}
+
+.edu-title, .cert-title {
+    font-size: 1.5rem; 
+   
+    font-weight: bold; 
+}
+
+.edu-item, .cert-item {
+    margin-bottom: 1vh; /* Spacing between items */
+}
+
+/* My Other Works Section */
+.my-other-works-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Blogs and Contact side by side */
+    gap: 2vw;
+    padding: 2vh 2vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blogs Section */
+.blogs-container {
+    height: 400px; 
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 1vh; 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Blog Item Style */
+.blog-item {
+    display: grid;
+    grid-template-columns: 2fr 2fr; 
+    gap: 1vw;
+    margin-bottom: 1vh; 
+}
+
+.blog-item img {
+    width: 300px;
+    height: 300px;
+    border-radius: 5px;
+}
+
+/* Contact Section */
+.contact-me-container {
+    height: 400px; 
+    padding: 1vh; 
+    border: 1px solid #ccc; 
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Item Style */
+.contacts {
+    margin-bottom: 2vh;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    background-color: #0072B1;
+    color: white;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin: 20px;
+}
+
+.contact-btn:hover {
+    background-color: #ACC6C7;
+}
+
+.contact-btn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 1vw;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    background-color: #0072B1;
+    padding: 1vh 0;
+    width: 100%;
+    text-align: center;
+    height: 10vh;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 2vh;
+}
+
+
+
+/* Media Query for screens less than 500px */
+@media (max-width: 500px) {
+    /* Navigation Bar */
+    nav ul {
+        display: none; /* Hide menu by default on small screens */
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    /* Show the dropdown icon (hamburger) */
+    nav .icon {
+        display: block;
+        font-size: 30px;
+        color: white;
+        background-color: #0072B1;
+        cursor: pointer;
+    }
+
+    /* Show the menu when hamburger is clicked */
+    nav ul.responsive {
+        display: block;
+    }
+
+    /* Style each navigation item when displayed in the menu */
+    nav ul li {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 15px 20px;
+        font-size: 3vh;
+        text-decoration: none;
+        background-color: #0072B1;
+        color: white;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 1vh;
+    }
+
+    nav ul li a:hover {
+        background-color: #5F9EA0;
+    }
+
+    /* About Section */
+    .about-container {
+        grid-template-columns: 1fr; /* Stack the two columns in one column */
+    }
+
+    /* Services Section */
+    .services-container {
+        grid-template-columns: 1fr; /* Stack the service boxes */
+    }
+
+    /* My Other Works Section */
+    .my-other-works-container {
+        grid-template-columns: 1fr; /* Stack the blogs and contact */
+    }
+
+    /* Project Section */
+    .project-box {
+        width: 100%; /* Make project boxes take full width */
+        margin-bottom: 2vh;
+    }
+
+    .project-box img {
+        width: 70%;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+
+    /* Footer Navigation */
+    .footer-nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+    }
+
+    .footer-nav ul li a {
+        font-size: 2.5vh;
+    }
+}
+
+    </style>
+    
+</head>
+<body>
+
+<article>
+<header>
+    <strong>My Portfolio</strong>
+</header>
+    <nav>
+        <div class="icon" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links" id="navMenu">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education-certificates">Education</a></li>
+            <li><a href="#my-other-works">My Other Works</a></li>
+        </ul>
+    </nav>
+    </article>
+
+
+<section id="about">
+    <h1>Hi, I'm Nishitha</h1>
+    <div class="about-container">
+        <div class="about-text">
+            
+            <p>I am a passionate and dedicated software developer with a strong foundation in computer science.</p>
+            <br><p>Professionally, I have worked as a software developer for two years at Cognizant Technology Solutions, where I honed my skills in designing and developing scalable software solutions. I am proficient in technologies such as Java, Spring Boot, and modern web development frameworks, and I take pride in writing clean, efficient, and maintainable code.
+
+               </p>
+               <br><p>Currently, I am pursuing my master's degree at the University of New Haven, where I aim to deepen my knowledge and explore advanced topics in computer science. My experience and education have instilled in me strong analytical skills, problem-solving abilities, and a keen interest in building innovative solutions that make a meaningful impact.
+                
+                Outside of work and academics, I enjoy exploring new technologies, collaborating on open-source projects, and continuously learning to stay updated in this fast-paced industry.
+                </p>
+        </div>
+        <div class="about-photo">
+            <img src="./images/photo.jpeg" alt="Nishitha's photo" class="profile-pic">
+            <div class="name-designation">
+                <h2>Nishitha</h2>
+                <div>Software Developer</div><br>
+  </div>
+            <a href="#my-other-works" class="connect-btn">Let's connect?</a> 
+        </div>
+    </div>
+</section>
+
+
+<section id="services">
+    <h1>Services</h1>
+    <div class="services-container">
+        <div class="service-box">
+            <img src="./images/spring.png" alt="Service 1">
+            <h2>Microservices Architecture</h2>
+            <p>Developed scalable and distributed microservices using Java and Spring Boot to ensure efficient system design.</p>
+        </div>
+        <div class="service-box">
+            <img src="./images/java.png" alt="Service 2">
+            <h2>Java Development</h2>
+            <p>Built robust backend systems using Java, focusing on performance optimization and clean code practices</p>
+        </div>
+        <div class="service-box">
+            <img src="./images/aws.png" alt="Service 3">
+            <h2>AWS Cloud Solutions</h2>
+            <p>Deployed and managed cloud-based applications using AWS services like EC2, S3, RDS, and Lambda.</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience">
+    <h1>Experience</h1>
+    <div class="experience-container">
+        <div class="experience-box">
+            <img src="./images/cognizant.png" alt="Experience 1" class="experience-img">
+            <div class="experience-text">
+                <h2>Software Developer, Cognizant</h2>
+                <p>Worked on full-stack web development using Java and Spring Boot. Developed APIs for large-scale applications, ensuring high performance and scalability.</p>
+                <p>Collaborated with cross-functional teams to deliver solutions, and optimized application performance by 30% through code refactoring.</p>
+            </div>
+        </div>
+        <div class="experience-box">
+            <img src="./images/pathcreators.png" alt="Experience 2" class="experience-img">
+            <div class="experience-text">
+                <h2>Junior Developer, XYZ Corp</h2>
+                <p>Contributed to front-end development using React and JavaScript frameworks. Improved the UI/UX of customer-facing applications.</p>
+                <p>Participated in code reviews, debugging, and worked on resolving production issues in a timely manner.</p>
+            </div>
+        </div>
+        <div class="experience-box">
+            <img src="./images/techsolutions.png" alt="Experience 3" class="experience-img">
+            <div class="experience-text">
+                <h2>Intern, Tech Solutions</h2>
+                <p>Assisted senior developers in maintaining software systems and wrote unit tests to enhance code coverage.</p>
+                <p>Developed a small-scale tool for automating repetitive tasks, which reduced manual workload by 15%.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h1>Projects</h1>
+    <div class="projects-container">
+        <div class="project-box">
+            <img src="./images/api.png" alt="Project 1">
+            <h2>Smart API Gateway</h2>
+            <p>A Zuul-based API Gateway solution for efficient microservice routing.</p>
+        </div>
+        <div class="project-box">
+            <img src="./images/task.png" alt="Project 2">
+            <h2>Task Management App</h2>
+            <p>Built with Spring Boot for backend services and React for frontend UI.</p>
+        </div>
+        <div class="project-box">
+            <img src="./images/stream.png" alt="Project 3">
+            <h2>Event Streaming System</h2>
+            <p>Implemented Server-Sent Events (SSE) for real-time data streaming.</p>
+        </div>
+        <div class="project-box">
+            <img src="./images/portfolio.png" alt="Project 4">
+            <h2>Portfolio Website</h2>
+            <p>Responsive personal portfolio showcasing projects and experience.</p>
+        </div>
+    </div>
+</section>
+
+<section id="education-certificates">
+    <h1>Education & Certificates</h1>
+   
+    <div class="edu-cert-container">
+        <div class="edu-box">
+            <div class="edu-title">Education</div>
+            
+            <div class="edu-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD6
+            ElEQVR4nO2W309TZxjH6xJjsptd7GaJxhuX/QNeMEW9mTLGZDKgoDgFoqEzGgEZCDQaUMMPCQiouCJFOzBDfs1RkJiRKEL7vqfnRaOW8zqSJd7
+            olSaazGQxxq95T6BAaaE97ekhS5/kSd6cc3qez+d5f/SYTPGIRzzi8b+Lfxj7jE/RAi5TxmUyrcjkpCJJn5tWe/ApupnL1MZl8i9nFAtTkel/Ci
+            O90x73TgBrTKslvJL0BWekkDPyxB86aMp0hsukysvYRkOgAXwiOik6yhl5FzK4/6ww+p4z+tdTJpkZY2t1B5+hdINYz1ymz7RCB0/ygjNaN8MmN0
+            UXeub2OtEh0SlFJh+iD04DLTEmDgHG2KcRwXOZZioyfR4TaBZgiYnaHpKhCV5hNGl2jRoCzxfsE0Umu7QITGotOu0hcI6Moq69C7W2LgwNj6rXIpC
+            YCFuAM/I23EJeD8Gfw7dx5ooD5c0di7Lq8nX03RqG1+PWIEHeahAIvcBjyY2BoRFUty0FDyTy++AQHlFXWBK6CDwkkyrM6UvXVgT3z1MXO+Ho/QMP3
+            BOxFxDg3f23YG3tDBvcP62tdnT2DGLKNaG/gOy6r3bN2mIPClRyvg35ZdVIO3QM2/dkI2lvfkgila12tN/oB50Y10fA3jOAygCFyxptKDhVh6wjJ/CN+
+            SASktOQ8O0eX4YqUD4n0tyh1oq6gK27DxWzRQprWnHwxGmk5h5B4veZi4C3fJeO5JzDyDlejqPVjSi/cDUsgYrmDthu9OuzhMj9e0jLtSwCFh3faT6gz
+            oCYCTEjWvZCRYsdl37rxeS9u/pu4jnw3GMlOFRWra75SDZxZcvya183gbnT6Gr3TZRq6PrJpna0OXpWPH10FRDZ5XBg224zso+W4peGKyuClzb+ip+Krdj
+            xQxa6HY7Y/5H5C5ytqfdd25qSgQxLMYrrLy89XhvaVMnE3fOb/lxtvfEClsKSxZt6ViTTUoyi2otqirG45v+cpbDEeAFzXsESsFDTnFdgvEBS+n7NArvSc
+            4wX2Jryo2aBxJR04wUSkrXBi/x6wXsMExgbcaKhqRn7Dv+sAoUCLZ4VvxkbccZWwDk44AMRY//743dGUVRWiS1+H3TqN1JymnpPPBMqNI+2QOq+XB9Qak5e
+            0GJ3nEPIyp//ZhJjcU0LOI+mQEr2AR+UGC9X8InkgrXqjJpiHAk8j5ZATX2DT0CMI4XisRZ44BpHUsZ+NcV4VQsojLwJ9CLx8SYylvAKI6/DnwGZDsQSki8v0B
+            f+DEjSV5yRl0bDc0ZfeafcX5q0xN8P3esVmd4Mtpx07vob0XnN8PGIRzziYYpFfARDfBXG+PyxSgAAAABJRU5ErkJggg==" alt="student-center">
+                Bachelor's Degree in Computer Science - JNTUHCEH</div>
+            <div class="edu-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD6
+            ElEQVR4nO2W309TZxjH6xJjsptd7GaJxhuX/QNeMEW9mTLGZDKgoDgFoqEzGgEZCDQaUMMPCQiouCJFOzBDfs1RkJiRKEL7vqfnRaOW8zqSJd7
+            olSaazGQxxq95T6BAaaE97ekhS5/kSd6cc3qez+d5f/SYTPGIRzzi8b+Lfxj7jE/RAi5TxmUyrcjkpCJJn5tWe/ApupnL1MZl8i9nFAtTkel/Ci
+            O90x73TgBrTKslvJL0BWekkDPyxB86aMp0hsukysvYRkOgAXwiOik6yhl5FzK4/6ww+p4z+tdTJpkZY2t1B5+hdINYz1ymz7RCB0/ygjNaN8MmN0
+            UXeub2OtEh0SlFJh+iD04DLTEmDgHG2KcRwXOZZioyfR4TaBZgiYnaHpKhCV5hNGl2jRoCzxfsE0Umu7QITGotOu0hcI6Moq69C7W2LgwNj6rXIpC
+            YCFuAM/I23EJeD8Gfw7dx5ooD5c0di7Lq8nX03RqG1+PWIEHeahAIvcBjyY2BoRFUty0FDyTy++AQHlFXWBK6CDwkkyrM6UvXVgT3z1MXO+Ho/QMP3
+            BOxFxDg3f23YG3tDBvcP62tdnT2DGLKNaG/gOy6r3bN2mIPClRyvg35ZdVIO3QM2/dkI2lvfkgila12tN/oB50Y10fA3jOAygCFyxptKDhVh6wjJ/CN+
+            SASktOQ8O0eX4YqUD4n0tyh1oq6gK27DxWzRQprWnHwxGmk5h5B4veZi4C3fJeO5JzDyDlejqPVjSi/cDUsgYrmDthu9OuzhMj9e0jLtSwCFh3faT6gz
+            oCYCTEjWvZCRYsdl37rxeS9u/pu4jnw3GMlOFRWra75SDZxZcvya183gbnT6Gr3TZRq6PrJpna0OXpWPH10FRDZ5XBg224zso+W4peGKyuClzb+ip+Krdj
+            xQxa6HY7Y/5H5C5ytqfdd25qSgQxLMYrrLy89XhvaVMnE3fOb/lxtvfEClsKSxZt6ViTTUoyi2otqirG45v+cpbDEeAFzXsESsFDTnFdgvEBS+n7NArvSc
+            4wX2Jryo2aBxJR04wUSkrXBi/x6wXsMExgbcaKhqRn7Dv+sAoUCLZ4VvxkbccZWwDk44AMRY//743dGUVRWiS1+H3TqN1JymnpPPBMqNI+2QOq+XB9Qak5e
+            0GJ3nEPIyp//ZhJjcU0LOI+mQEr2AR+UGC9X8InkgrXqjJpiHAk8j5ZATX2DT0CMI4XisRZ44BpHUsZ+NcV4VQsojLwJ9CLx8SYylvAKI6/DnwGZDsQSki8v0B
+            f+DEjSV5yRl0bDc0ZfeafcX5q0xN8P3esVmd4Mtpx07vob0XnN8PGIRzziYYpFfARDfBXG+PyxSgAAAABJRU5ErkJggg==" alt="student-center">
+            Master's Degree in Data Science - UNH</div>
+            
+        </div>
+        <div class="cert-box">
+            <div class="cert-title">Certificates</div>
+            
+            <div class="cert-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBk
+            lEQVR4nO2Y3UtTcRzGR1eVmZllBeFrmS/5MqNCiyIhSzQI0gu9CAsir/oXhIi6qX8hZFZqVm6+bLqdWU5LN7fyrYtppbjpzjw7Z6dtF1njPLFNW
+            dDEzZ2OW5wHPrBdnMPz2e97zuArkYgRI0aMGD5zapCplmqcVqmGQYkPNYPiAdpPUT+NIhWNQpUDhUoHTvYFKOilUNBDId9H9wryFAFy5SvI7bLjx
+            JsAOa/tyHlF4riPThLHXtr8ZHfYkN1uQ1b7MrLalpH5IkDG8yVkPFtCug+Z1ZLeYqnaVKCUcFqkhBMxJ9BqRZrMsri5gNaJUAJlBA2WZQUhv2MjASu
+            2LHBrlBFMoK6f5F9ANe8UTKB7luZX4MmMcOXZNR4YqOgEyrUMbusZqBaEL8+un4TZgToViby2LQhsV2l2A3gVUM4zuETw9xotk5Pom6OFE6jQ8v8/UC
+            4nRYGwT6B/3okKHkeoXEFCKeQIxf1DzP4vAvXDdNQjVKu2b59Ag84R3wJsvI8QKwqw4gn8FXGEWBYeahAuhxGrC01Y/dYEF2WEx66Nn4fYO3cR+HwEmDk
+            MTB0CJlLhnTkX+wIeioB39kKw+GQq8OkgYDoAGFPgnTgDj42IXQG3wwhM/1H8Y6A4DPsBfTK40SS47YbYFfj59S4wsVbclAKMrxffB+5DEriRRPyYaoxhgS9
+            3gsUNyeDG1ovvBTecCG5oD1YnbwojUKZl0DjGQLkQwQitjAeLjyaBex8szr1LADe4G25SH/b95GYaN5Q25LZFuVZ5PB3eiXhsGvwynQ4UH0kEpwsW57S74B0ph
+            sc6ENa97uspfhdbyggWW472UnBDCeDeBopzmp2gWooj+uUz+d7MNUawWlRc70Fn5TDMjxpgfliPzss6KK71hH197b9YLUay3H1aSoVEmOUuEf16vfUsHRJB1uslBF
+            0l1Tgt0Qh0nGdCEo1AmsyyeFS2eFUiRLoqWIRCEi/pvfIdfipZnZ+175J4ibrGZRmocd9rbsYOH77P6mrX5vMrRowYSaT5Db4OJHOZT/q1AAAAAElFTkSuQmCC" alt="diploma">
+            Certified Java Developer</div>
+            <div class="cert-item">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADBk
+            lEQVR4nO2Y3UtTcRzGR1eVmZllBeFrmS/5MqNCiyIhSzQI0gu9CAsir/oXhIi6qX8hZFZqVm6+bLqdWU5LN7fyrYtppbjpzjw7Z6dtF1njPLFNW
+            dDEzZ2OW5wHPrBdnMPz2e97zuArkYgRI0aMGD5zapCplmqcVqmGQYkPNYPiAdpPUT+NIhWNQpUDhUoHTvYFKOilUNBDId9H9wryFAFy5SvI7bLjx
+            JsAOa/tyHlF4riPThLHXtr8ZHfYkN1uQ1b7MrLalpH5IkDG8yVkPFtCug+Z1ZLeYqnaVKCUcFqkhBMxJ9BqRZrMsri5gNaJUAJlBA2WZQUhv2MjASu
+            2LHBrlBFMoK6f5F9ANe8UTKB7luZX4MmMcOXZNR4YqOgEyrUMbusZqBaEL8+un4TZgToViby2LQhsV2l2A3gVUM4zuETw9xotk5Pom6OFE6jQ8v8/UC
+            4nRYGwT6B/3okKHkeoXEFCKeQIxf1DzP4vAvXDdNQjVKu2b59Ag84R3wJsvI8QKwqw4gn8FXGEWBYeahAuhxGrC01Y/dYEF2WEx66Nn4fYO3cR+HwEmDk
+            MTB0CJlLhnTkX+wIeioB39kKw+GQq8OkgYDoAGFPgnTgDj42IXQG3wwhM/1H8Y6A4DPsBfTK40SS47YbYFfj59S4wsVbclAKMrxffB+5DEriRRPyYaoxhgS9
+            3gsUNyeDG1ovvBTecCG5oD1YnbwojUKZl0DjGQLkQwQitjAeLjyaBex8szr1LADe4G25SH/b95GYaN5Q25LZFuVZ5PB3eiXhsGvwynQ4UH0kEpwsW57S74B0ph
+            sc6ENa97uspfhdbyggWW472UnBDCeDeBopzmp2gWooj+uUz+d7MNUawWlRc70Fn5TDMjxpgfliPzss6KK71hH197b9YLUay3H1aSoVEmOUuEf16vfUsHRJB1uslBF
+            0l1Tgt0Qh0nGdCEo1AmsyyeFS2eFUiRLoqWIRCEi/pvfIdfipZnZ+175J4ibrGZRmocd9rbsYOH77P6mrX5vMrRowYSaT5Db4OJHOZT/q1AAAAAElFTkSuQmCC" alt="diploma">
+            AWS Certified Solutions Architect</div>
+            
+        </div>
+    </div>
+    
+</section>
+<section id="my-other-works">
+    <div class="my-other-works-container">
+    <div class="blogs-container">
+        <h2>My Blogs</h2>
+        <div class="blog-item">
+            <img src="./images/blog1.png" alt="Blog Image">
+            <div><strong>From Hyderabad to the World: My Journey in Software Development </strong>
+                <br> In this blog, I share my journey from earning my degree at JNTUHCEH, one of Telangana's top universities, to working as a software developer at Cognizant. I discuss the challenges I faced, 
+                the skills I developed, and how my passion for coding led me to pursue a master's degree at the University of New Haven.
+            </div>
+        </div>
+        <div class="blog-item">
+            <img src="./images/blog2.png" alt="Blog Image">
+            <div><strong>Exploring Microservices Architecture with Spring Boot and Java</strong>
+                <br> As a developer, I’ve worked extensively with Java and Spring Boot to create efficient and scalable applications. In this blog, I explore the fundamentals of microservices architecture, how tools like Spring Boot, Eureka, 
+                and Zuul can streamline application development, and the lessons I’ve learned while building real-world projects.
+            </div>
+        </div>
+        <div class="blog-item">
+            <img src="./images/blog3.png" alt="Blog Image">
+            <div><strong> My Transition from Software Developer to Graduate Student: A New Beginning</strong>
+                <br> Taking the leap from a stable career to higher education is never easy. In this blog, I reflect on my decision to pursue a master’s degree in computer science in the United States. I share my preparation for exams like GRE and TOEFL, 
+                my experience with the visa process, and how I’m adapting to life as a graduate student in a new country.
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-me-container">
+        <h2>Contact Me</h2>
+        <div class="contacts">
+            <div class="contact-item">
+                <a href="tel:+1234567890" class="contact-btn">
+                    <img src="./images/call.png" alt="Call Icon">
+                    Call Me
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:nishithataprala1612@gmail.com" class="contact-btn">
+                    <img src="./images/gmail.png" alt="Email Icon">
+                    Email Me
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.linkedin.com/in/nishitha" target="_blank" class="contact-btn">
+                    <img src="./images/linkedin.png" alt="LinkedIn Icon">
+                    LinkedIn
+                </a>
+            </div>
+            <div class="contact-item">
+                <a href="https://www.instagram.com/nishitha_1612" target="_blank" class="contact-btn">
+                    <img src="./images/insta.png" alt="Instagram Icon">
+                    Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+</div>
+
+</section>
+<!-- Footer navigation bar -->
+<footer class="footer-nav">
+    <ul class="nav-links">
+        <li><a href="#about">Back to Top</a></li>
+    </ul>  
+</footer>
+
+</body>
+</html>
+
