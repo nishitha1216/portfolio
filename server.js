@@ -30,7 +30,7 @@ function getContentType(ext) {
 // Create HTTP server
 const server = http.createServer(async (req, res) => {
   // Set CORS headers manually
-  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080');  // Allow only this origin
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8080','http://localhost:8081');  // Allow only this origin
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.url === "/" || req.url === "/index.html") {
